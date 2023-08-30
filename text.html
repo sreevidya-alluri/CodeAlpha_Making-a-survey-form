@@ -1,0 +1,67 @@
+<html>
+    
+    <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script></head>
+    <body>
+        <div>
+        <div class="container">
+            <h1 class="head">SURVEY FORM</h1>
+
+            <form id="form1">
+                <h3>ACCOUNT RELATED</h3>
+                <input type="text" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Hours played" required>
+                <div class="g-recaptcha" data-sitekey="6Lexj5AnAAAAAIV7FX0FRgWk-RmOY0rnQSoIS9AQ"></div>
+                <div class="btn-box">
+                    <button type="button" id="Next1">Next</button>
+                </div>
+            </form>
+
+            <form id="form2">
+                <h3>THE LIST</h3>
+                <input type="text" placeholder="Medium of playing" required>
+                <label>Name of the game</label><br>
+                <label for="sky-button"><input type="radio" name="layer-select" id="sky-button" checked class="inline" value="1" /> Candy Crush</label><br>
+                <label for="surface-button"><input type="radio" name="layer-select" class="inline" id="surface-button" value="2" />Temple run</label><br>
+                <label for="depths-button"><input type="radio" name="layer-select" class="inline" id="depths-button" value="3" />Ludo</label><br>
+                 <!-- Checkboxes: aspects to improve -->
+                <label class="needs-space-above">Which aspects of the game do you think could use improvement?</label><br>
+                <label for="check1"><input type="checkbox" name="improve-check" value="1" class="inline" id="check1" />App development</label><br>
+                <label for="check2"><input type="checkbox" name="improve-check" value="2" class="inline" id="check2" />Advertisements</label><br>
+                <label for="check3"><input type="checkbox" name="improve-check" value="3" class="inline" id="check3" />Rewards</label><br>
+                <div class="btn-box">
+                    <button type="button" id="Back1">Back</button>
+                </div>
+                <div class="btn-box">
+                    <button type="button" id="Back1">Submit</button>
+                </div>
+            </form>
+            <dvi class="step-row">
+                <div id="progress"></div>
+                <div class="step-col"><small>Step1</small></div>
+                <div class="step-col"><small>Step2</small></div>
+            </dvi>
+            <script>
+                var Form1 = document.getElementById("form1");
+                var Form2 = document.getElementById("form2");
+                var Next1=document.getElementById("Next1");
+                var Back1=document.getElementById("Back1");
+                var progress=document.getElementById("progress");
+                Next1.onclick=function(){
+                    Form1.style.left="-450px";
+                    Form2.style.left="40px";
+                    progress.style.width="360px";
+                }
+                Back1.onclick=function(){
+                    Form1.style.left="40px";
+                    Form2.style.left="450px";
+                    progress.style.width="360px";
+                }
+            </script>
+           
+        </div>
+        </div>
+    </body>
+</html>
